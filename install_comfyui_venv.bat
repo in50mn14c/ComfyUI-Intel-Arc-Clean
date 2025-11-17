@@ -1,12 +1,12 @@
 @echo off
 REM === [OPTIONAL] Delete old ComfyUI folder for a clean install ===
-REM rmdir /s /q C:\ComfyUI
+REM rmdir /s /q e:\ComfyUI
 
 REM 1. Clone the latest ComfyUI
-git clone https://github.com/comfyanonymous/ComfyUI.git C:\ComfyUI
+git clone https://github.com/comfyanonymous/ComfyUI.git e:\ComfyUI
 
 REM 2. Go to the ComfyUI directory
-cd /d C:\ComfyUI
+cd /d e:\ComfyUI
 
 REM 3. Create an isolated Python venv
 python -m venv comfyui_venv

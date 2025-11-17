@@ -2,16 +2,16 @@
 echo ===== ComfyUI Installer/Updater =====
 
 REM Check if ComfyUI is already installed
-IF NOT EXIST "C:\ComfyUI" (
+IF NOT EXIST "e:\ComfyUI" (
     REM === Original installation script ===
     REM === [OPTIONAL] Remove old ComfyUI folder for a clean install ===
-    REM rmdir /s /q C:\ComfyUI
+    REM rmdir /s /q e:\ComfyUI
 
     REM 1. Clone the latest version of ComfyUI
-    git clone https://github.com/comfyanonymous/ComfyUI.git C:\ComfyUI
+    git clone https://github.com/comfyanonymous/ComfyUI.git e:\ComfyUI
 
     REM 2. Go to ComfyUI folder
-    cd /d C:\ComfyUI
+    cd /d e:\ComfyUI
 
     REM 3. Create an isolated Python venv
     python -m venv comfyui_venv
@@ -48,7 +48,7 @@ IF NOT EXIST "C:\ComfyUI" (
     echo ComfyUI is already installed. Updating...
     
     REM 1. Go to ComfyUI folder
-    cd /d C:\ComfyUI
+    cd /d e:\ComfyUI
 
     REM 2. Activate the venv
     call comfyui_venv\Scripts\activate.bat

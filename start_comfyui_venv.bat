@@ -1,6 +1,6 @@
 @echo off
 set SYCL_CACHE_PERSISTENT=1
-set SYCL_CACHE_DIR=C:\ComfyUI\sycl_cache
+set SYCL_CACHE_DIR=e:\ComfyUI\sycl_cache
 set SYCL_PI_LEVEL_ZERO_USE_IMMEDIATE_COMMANDLISTS=1
 
 REM Intel Arc GPU compatibility fixes
@@ -8,9 +8,9 @@ set ONEAPI_DEVICE_SELECTOR=level_zero:gpu
 set SYCL_DEVICE_FILTER=level_zero:gpu
 
 REM Create cache directory if it doesn't exist
-if not exist "C:\ComfyUI\sycl_cache" mkdir "C:\ComfyUI\sycl_cache"
+if not exist "e:\ComfyUI\sycl_cache" mkdir "e:\ComfyUI\sycl_cache"
 
-cd /d C:\ComfyUI
+cd /d e:\ComfyUI
 call comfyui_venv\Scripts\activate.bat
 
 REM Eager mode: no torch.compile backend, plain PyTorch on XPU

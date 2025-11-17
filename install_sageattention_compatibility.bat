@@ -1,6 +1,6 @@
 @echo off
 REM Activate the venv
-cd /d C:\ComfyUI
+cd /d e:\ComfyUI
 call comfyui_venv\Scripts\activate.bat
 
 echo ====================================
